@@ -1,0 +1,44 @@
+//cada vez que un widget se reconstruye
+//en el pubspec.ymal hay que añadir la dependencia provider:6.1.2;
+1-importamos en el main el provider
+2-changenotifierprovider comunica al resto de la aplicacaion se da cuenta y actua en consecuencia.
+Tenemos que decir el alcance del provider (create:(_)=>Alumnoprovider())
+  asi =
+  
+  widget build(BuildContext context){
+  return multiprovider(
+    providers:[
+      ...
+    ],
+    child MaterialApp();
+  )
+}
+  
+  Alumnoprovider
+
+  class ... extends changenotifier{
+    //propiedades
+
+    future<void> getInfo (int idalumno)async{
+      const storage = FlutterSecureStorage();
+      String? apikey = await storage.read(key:'apiKey')
+      await getAlumnoInfo(idalumno,apikey)
+      await getAlumnoGrupo(apiKey)
+      ...
+      notifyListeners()
+    }
+    Fut<void> getalumnoinfo(int idalumno, string? apikey)async{
+      var url = Uri.parse(api/$idalumno);
+      var response = await http.gey(url, headers: {
+        'Token':apikey!
+      });
+      if(response. statuscode ==200){
+        final registro = json.decode(response.body);
+        grupo= registro [0]['nombre'];
+      }else{
+        throw ' no se ha encontrado el grupo';
+      }
+      }
+    }
+
+   

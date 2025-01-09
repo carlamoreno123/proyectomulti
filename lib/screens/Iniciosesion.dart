@@ -14,7 +14,7 @@ class Iniciosesion extends StatelessWidget {
             SizedBox(height: 50),
             // Imagen agregada
             Image.asset(
-              'assets/images/imagen.webp',
+              'assets/images/imagen copy.webp',
               width: 150,
               height: 150,
               fit: BoxFit.cover,
