@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:proyectomulti/screens/Iniciosesion.dart';
 
-class Iniciosesion extends StatelessWidget {
-  const Iniciosesion({super.key});
+class Crearcuenta extends StatelessWidget {
+  const Crearcuenta({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,14 +12,14 @@ class Iniciosesion extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 150),
+            SizedBox(height: 20),
             // Imagen agregada
 
-            SizedBox(height: 100),
+            SizedBox(height: 20),
             Text(
-              '¡Bienvenido!',
+              '¡Comenzemos a crear tu cuenta!',
               style: TextStyle(
-                fontSize: 50,
+                fontSize: 30,
                 color: Color.fromARGB(255, 0, 0, 0),
                 fontStyle: FontStyle.italic,
                 fontWeight: FontWeight.bold,
@@ -78,6 +79,68 @@ class Iniciosesion extends StatelessWidget {
                     decoration: TextDecoration.underline,
                   ),
                 ),
+                SizedBox(height: 30,),
+                Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Escribe aquí...',
+                    hintText: 'nombre de usuario',
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'confirmar',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+                Text(
+                  'usuario',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 30),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+            TextField(
+              obscureText: true, 
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Escribe aquí...',
+                hintText: ' contraseña',
+              ),
+            ),
+            
+            
+            Text(
+                  'confirmar ',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+                  Text(
+                  'contraseña ',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
                 
               ],
             ),
@@ -85,11 +148,11 @@ class Iniciosesion extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('¿No tienes cuenta? clica '),
+                Text('¿Ya lo tienes?'),
                  ElevatedButton(
-                onPressed: () {},
+                onPressed: () {const Iniciosesion();},
                 child: Text(
-                  'Aquí',
+                  'Inicia sesion',
                   style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
                 ),
                 style: ElevatedButton.styleFrom(
@@ -101,7 +164,8 @@ class Iniciosesion extends StatelessWidget {
           
         ]),
         
-      )
+      ]),
+    )
     );
     
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyectomulti/screens/Crearcuenta.dart';
 import 'package:proyectomulti/screens/Iniciosesion.dart';
 import 'screens/Homescreen.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
     debugShowCheckedModeBanner: false,
-   home: Homescreen(),
+   home: Crearcuenta(),
    
     );
   }

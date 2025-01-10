@@ -14,7 +14,9 @@ class Homescreen extends StatelessWidget {
         title: Text(
           'carla moreno',
           style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+          
         ),
+        
         actions: [
           Icon(
             Icons.notification_important,
@@ -54,21 +56,28 @@ class Homescreen extends StatelessWidget {
                           fontSize: 18,
                           color: Color.fromARGB(255, 255, 255, 255)),
                     ),
-                    Text(
-                      '(crear un plan)',
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: Color.fromARGB(255, 255, 255, 255)),
-                    ),
+                    ElevatedButton(
+                onPressed: () {},
+                child: Text(
+                  'Crear plan +',
+                  style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color.fromARGB(255, 176, 56, 223),
+                ),
+              ),
                   ],
                 ),
               ),
               SizedBox(height: 12),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
+      
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Container(
+                 Column(children: [Container(
                       height: 200,
                       width: 150,
                       margin: EdgeInsets.only(right: 10),
@@ -76,8 +85,10 @@ class Homescreen extends StatelessWidget {
                         color: Color.fromARGB(255, 123, 123, 126),
                         borderRadius: BorderRadius.circular(15),
                       ),
+                      
                     ),
-                    Container(
+                    Text('pierna', style: TextStyle(color: Color.fromARGB(255, 238, 235, 235)),)],),
+                  Column(children: [Container(
                       height: 200,
                       width: 150,
                       margin: EdgeInsets.only(right: 10),
@@ -85,17 +96,10 @@ class Homescreen extends StatelessWidget {
                         color: Color.fromARGB(255, 123, 123, 126),
                         borderRadius: BorderRadius.circular(15),
                       ),
+                      
                     ),
-                    Container(
-                      height: 200,
-                      width: 150,
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 123, 123, 126),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                    ),
-                    SizedBox(width: 10,),
-                       Container(
+                    Text('brazo', style: TextStyle(color: Color.fromARGB(255, 238, 235, 235)),)],),
+                   Column(children: [Container(
                       height: 200,
                       width: 150,
                       margin: EdgeInsets.only(right: 10),
@@ -103,7 +107,21 @@ class Homescreen extends StatelessWidget {
                         color: Color.fromARGB(255, 123, 123, 126),
                         borderRadius: BorderRadius.circular(15),
                       ),
+                      
                     ),
+                    Text('antebrazo', style: TextStyle(color: Color.fromARGB(255, 238, 235, 235)),)],),
+                    SizedBox(width: 2,),
+                    Column(children: [Container(
+                      height: 200,
+                      width: 150,
+                      margin: EdgeInsets.only(right: 10),
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 123, 123, 126),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      
+                    ),
+                    Text('pecho', style: TextStyle(color: Color.fromARGB(255, 238, 235, 235)),)],),
                   ],
                 ),
               ),
@@ -117,12 +135,7 @@ class Homescreen extends StatelessWidget {
                         fontSize: 18,
                         color: Color.fromARGB(255, 255, 255, 255)),
                   ),
-                  Text(
-                    '(crear rutina)',
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: Color.fromARGB(255, 255, 255, 255)),
-                  ),
+                  
                 ],
               ),
               SizedBox(height: 10,),
@@ -138,7 +151,7 @@ class Homescreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {},
                 child: Text(
-                  '+ Crear rutina',
+                  'Crear rutina +',
                   style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
                 ),
                 style: ElevatedButton.styleFrom(
@@ -196,10 +209,7 @@ class Homescreen extends StatelessWidget {
                     icon: Icon(Icons.food_bank),
                     label: 'Mis dietas',
                   ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.safety_check),
-                    label: 'Hablar con un profesional',
-                  ),
+                
                   BottomNavigationBarItem(
                     icon: Icon(Icons.person),
                     label: 'Mi perfil',
