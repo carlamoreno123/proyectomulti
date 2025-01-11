@@ -21,8 +21,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  assets: [
-    assets/images/image.png
-    assets/images/vecteezy_3d-sportsman-character-sculpting-strong-shoulders-with_30775207.png
-  ]
+  
  

@@ -9,12 +9,6 @@ class Crearcuenta extends StatelessWidget {
     return Scaffold(
       body: Container(
           padding: const EdgeInsets.all(16.0),
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/image.jpg'), // Ruta de la imagen
-              fit: BoxFit.cover, // Hace que la imagen ocupe toda la pantalla
-            ),
-          ),
       
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
