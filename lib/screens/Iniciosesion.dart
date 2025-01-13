@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyectomulti/screens/crearcuenta.dart';
 
 class Iniciosesion extends StatelessWidget {
   const Iniciosesion({super.key});
@@ -87,7 +88,7 @@ class Iniciosesion extends StatelessWidget {
               children: [
                 Text('¿No tienes cuenta? clica '),
                  ElevatedButton(
-                onPressed: () {},
+                onPressed: () {const Crearcuenta();},
                 child: Text(
                   'Aquí',
                   style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),

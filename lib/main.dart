@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:proyectomulti/screens/Crearcuenta.dart';
-import 'package:proyectomulti/screens/Iniciosesion.dart';
+import 'package:proyectomulti/screens/crearcuenta.dart';
+import 'package:proyectomulti/screens/iniciosesion.dart';
 import 'screens/Homescreen.dart';
-import 'screens/Plan.dart';
-import 'screens/Social.dart';
-
+import 'screens/plan.dart';
+import 'screens/social.dart';
+import 'screens/dietas.dart';
+import 'screens/perfil.dart';
+import 'screens/si.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: Social(),
+    home: Dietas(),
    
     );
   }
